@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Google DRive</title>
+
+  <!-- <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico"> -->
+  <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.4/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+
+
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+          <form action="/upload2" method="POST" enctype="multipart/form-data">
+          <div class="div">Choose File
+              <input id="avatar" type="file" value="upload" name="file" enctype="multipart/form-data" multiple class="hide_file"><br><br>
+          </div>
+              <input class='btn-primary' type="submit" value="upload" id="file" multiple="multiple">
+              <br><br>
+          </form>
+
+
+<!-- <div class="box">
+<form action="/upload2" method="POST" enctype="multipart/form-data">
+          <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+           <input class='btn-primary' type="submit" value="upload" id="file" multiple="multiple">
+          <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
+         </form>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+     <!--      <audio controls autoplay>
+            <source src="/css/Somewhere over the rainbow - 50 elsõ randi.ogg" type="audio/ogg">
+            <source src="/css/Somewhere over the rainbow - 50 elsõ randi.mp3" type="audio/mpeg">
+          </audio> -->
+      </div>
+
+      <div class="row" id="desktop">
+              <div class="col-md-3"><div id="a"></div></div>
+              <div class="col-md-6"><div id='b'></div></div>
+              <div class="col-md-3"><div id="c"></div></div>
+      </div>
+
+    <!--    <div class="row" id="mobile">
+              <div class="col-md-3"></div>
+              <div class="col-md-6"><div id='d'></div></div>
+              <div class="col-md-3"></div>
+      </div> -->
+
+
+
+
+    </div>
+
+
+
+ <script src="java/weatherAPI.js"></script>
+ <script src="java/custom-file-input.js"></script>
+  <script src="java/index.js"></script>
+<!--   <script src="java/mobile.js"></script> -->
+  </body>
+</html>
+<style>
+  img,iframe{
+    width: 100%;
+   /* transition: .s ease;*/
+    border-radius: 50%;
+  }
+
+  h4,h5{
+    text-align: center;
+  }
+/*.div{
+  padding:5px 10px;
+  background:#00ad2d;
+  border:1px solid #00ad2d;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  float:left;
+  cursor:pointer
+}
+.hide_file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;   
+}*/
+
+#a,#c{
+  position: relative;
+  top:100px;
+  opacity:.4;
+  width:100%;
+}
+
+img,iframe{
+/*  -moz-box-shadow: 0 0 3px #ccc;
+-webkit-box-shadow: 0 0 3px #ccc;*/
+box-shadow: 0 0 20px black
+}
+
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%)
+font-size: 30px;
+}
+
+.text {
+background-color: #204d74;
+color: white;
+font-size: 16px;
+padding: 16px 25px;
+height:200px;
+width: 260px;
+}
+
+
+.middle:hover{
+  opacity: 1;
+}
+
+/*#mobile{
+  display:none;
+}
+#desktop{
+  display: block !important;
+}*/
+
+
+
+
+}
+
+</style>

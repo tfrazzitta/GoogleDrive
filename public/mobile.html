@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <title>MOBILE</title>
+
+
+
+  <!-- <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico"> -->
+  <link rel="apple-touch-icon" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.4/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+
+
+
+  </head>
+
+  <body>
+
+
+      <!--     <audio controls autoplay>
+            <source src="/css/Somewhere over the rainbow - 50 elsõ randi.ogg" type="audio/ogg">
+            <source src="/css/Somewhere over the rainbow - 50 elsõ randi.mp3" type="audio/mpeg">
+          </audio>
+      </div> -->
+     <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4"></div>
+              <div class="col-md-4">
+          <form action="/upload2" method="POST" enctype="multipart/form-data">
+          <div class="div"><h3>Choose File</h3>
+              <input id="avatar" type="file" value="upload" name="file" enctype="multipart/form-data" multiple class="hide_file"><br><br>
+          </div>
+              <input class='btn-primary' type="submit" value="upload" id="file" multiple="multiple">
+              <br><br>
+          </form>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+      <div class="row" id="desktop">
+              <div class="col-md-3"></div>
+              <div class="col-md-6"><div id="a"></div></div>
+              <div class="col-md-3"></div>
+      </div>
+
+
+
+
+
+    </div>
+  <script src="java/mobile.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/alexgibson/shake.js/master/shake.js"></script>
+<script>
+ 
+    //listen to shake event
+    var shakeEvent = new Shake({threshold: 15});
+    shakeEvent.start();
+    window.addEventListener('shake', function(){
+           $("#avatar").trigger("click")
+        //alert("Shaked");
+    }, false);
+
+    //stop listening
+    function stopShake(){
+        shakeEvent.stop();
+    }
+
+    //check if shake is supported or not.
+    if(!("ondevicemotion" in window)){
+      alert("Not Supported");}
+
+
+
+
+// function width(){
+// $( window ).resize(function() {
+//   var width=$( document ).width();
+//   if(width===667){
+//     //$("body").empty();
+//     //window.location.href ="/mobile";
+//     return false;
+//   }
+
+//   if(width>=769){
+//      $("body").empty();
+//       window.location.href ="/desktop";
+//     }
+//     else{
+//       window.location.href ="/mobile"
+//     }
+//   })
+// }
+// width();
+</script>
+
+<style>
+  img,iframe{
+    width:100%;
+    box-shadow:0 0 80px white;
+  }
+
+  iframe{
+    height:250px !important;
+  }
+
+  .col-md-6{
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+
+  h4,h5{
+    font-size:40px;
+    text-align: center;
+    color: darkgrey;
+  }
+  body,.jumbotron{
+    background-color: #444;
+  }
+
+/*  .div{
+  padding:5px 10px;
+  background:#00ad2d;
+  border:1px solid #00ad2d;
+  position:relative;
+  color:#fff;
+  border-radius:2px;
+  text-align:center;
+  float:left;
+  cursor:pointer;
+}*/
+
+.div{
+    padding: 5px 50px;
+    background: #00ad2d;
+    border: 1px solid #00ad2d;
+    position: relative;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    /*float: left;*/
+    cursor: pointer;
+    border-radius: 10%;
+    box-shadow: 0 0 20px white;
+    font-size: 26px;
+    line-height: 10px;
+}
+
+.hide_file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;   
+}
+
+h3{
+  padding-top: 15px;
+}
+
+
+</style>
+  </body>
+</html>
